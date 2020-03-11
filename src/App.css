@@ -1,38 +1,75 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Container {
   display: flex;
-  flex-direction: column;
+  flex-flow: column;
   align-items: center;
+  margin: auto auto;
+  background: whitesmoke;
+  height: auto;
+  width: 300px;
+}
+
+.Container h1 {
+  font-size: 1.25em;
+  margin-bottom: 5px;
+}
+
+.toDoRow {
+  display: flex;
+  flex-flow: row;
+  width: 250px;
+}
+
+.mainContainer {
+  width: 300px;
+}
+
+.toDoRow {
+  overflow: visible;
+  margin-top: 2px;
+  width: 255px;
+  border: 1px solid lightgray;
+  background: white;
+}
+
+.toDoRow p {
+  word-break: break-all;
+  width: 250px;
+}
+
+.toDoRow button {
+  font-size: .5em;
+  font-weight: bold;
+  color: maroon;
+  width: 20px;
+  height: auto;
+  background-color: transparent;
+  border: none;
+}
+
+.itemEntry {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.list {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.submit {
+  font-size: .75em;
+  padding: 1px;
 }
