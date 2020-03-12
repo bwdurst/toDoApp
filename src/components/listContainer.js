@@ -39,16 +39,15 @@ class ListContainer extends Component {
   }
 
   render() {
-    let todoItems = this.state.todo.map((el, i) => {
+    let todoItems = this.state.todo.map((text, i) => {
       return (
         <ToDoRow
           key={i}
-          text={el}
-          toDelete={() => { this.deleteItem(i) }}
+          text={text}
+          toDelete={this.deleteItem}
         />
       )
     })
-
 
     return (
       <div className="mainContainer">
@@ -66,7 +65,6 @@ class ListContainer extends Component {
         </ul>
         {/* <div className="footer">Footer placeholder</div> */}
       </div>
-
     )
   }
 }
